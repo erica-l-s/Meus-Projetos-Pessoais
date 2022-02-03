@@ -1,0 +1,205 @@
+/* 
+  http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+
+  RESET CSS
+*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;box-sizing:border-box}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* INICIO CSS */
+
+main{
+  display: flex;
+  justify-content: center;
+  }
+
+.dark section{
+  background-image: url(./imagem\ escura.jpg);
+  color: #90ddbf;
+  box-shadow: -20px -20px 0px 0px rgb(73, 73, 73);
+  }
+
+.dark header p{
+color: gray;
+border-bottom:2px dotted rgb(158, 157, 157)
+}
+
+.dark .formularioTarefa button{
+  background-color:rgb(240, 121, 180);
+  border-color:gray;
+  }
+
+  .dark .listaTarefas li{
+    background-color: hsla(0, 0%, 57%, 0.651) 
+  }
+  
+ .dark .listaTarefas button{
+  background-color: rgba(100, 98, 98, 0.05);
+
+ }
+
+/*APP LISTA DE TAREFAS*/
+section{
+ background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190628/ourmid/pngtree-pink-cherry-blossoms-beautiful-romantic-silhouette-advertising-background-image_269155.jpg);
+  width:500px;
+  color: #2e8b57;
+  border-radius: 25px;
+  margin-top:70px;
+  font-family: 'Vujahday Script', cursive;
+  height:600px;
+  box-shadow: -20px -20px 0px 0px rgb(255, 235, 235);
+  
+   
+  }
+ /* CABEÇALHO DO APP*/
+header{
+  padding: 50px 40px 0px;
+  
+}
+
+header h1{
+  font-size:42px;
+  font-weight: bold;
+  padding-top:75px;
+  padding-left:80px;
+  padding-right:50px;
+  padding-bottom:10px;
+  
+  }
+header p{
+  font-size: 14px;
+  font-weight: bold;
+  color:brown;
+  padding: 10px 120px;
+  border-bottom:2px dotted pink;
+  
+}
+/*AREA FORMULARIO DE TAREFAS*/
+.formularioTarefa{
+  padding-top:30px;
+  padding-right:60px;
+  padding-left:60px;
+  padding-bottom:70px;
+  display: flex;
+   }
+.formularioTarefa label{
+  display: none;
+  }
+.formularioTarefa input{
+  width:400px;
+  padding:10px 20px;
+  border: none;
+  font-family: 'Vujahday Script', cursive;
+  }
+.formularioTarefa button{
+ font-size: 15px;
+  width:100px;
+  margin-left:2px;
+  background-color:pink;
+  border-color:seagreen;
+  color:brown;
+  cursor:pointer;
+  font-family: 'Vujahday Script', cursive;
+  }
+  
+
+/* AREA LISTA DE TAREFAS*/
+.listaTarefas{}
+.listaTarefas ul{}
+.listaTarefas li{
+  padding: 5px 40px;
+  justify-content: space-between;
+  background-color: rgba(255,200,200,70%) ;
+  list-style: none;
+  display:flex;
+  font-size:18px;
+  margin-bottom: 5px;
+  align-items:center;
+  font-family: 'Vujahday Script', cursive;
+}
+.listaTarefas h2{
+  font-size:18px;
+
+  }
+
+ .listaTarefas li.tarefaFinalizada h2{
+    text-decoration: line-through;
+    opacity: .6;
+  }
+
+ 
+
+ .listaTarefas button{
+ font-family: 'Vujahday Script', cursive;
+ border-color: transparent;
+ background-color: rgba(255,200,200,5%);
+ 
+}
+
+.listaTarefas .botaoFinalizarTarefa{
+  background-image: url(./square.svg);
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 28px;
+  height: 28px;
+}
+
+  .listaTarefas li.tarefaFinalizada .botaoFinalizarTarefa{
+    background-image: url(./check.svg);
+  }
+/*AREA MODO NOTURNO*/
+
+  
+
+/* Uma classe que será atribuida ao ativar o checkbox*/
+.dark {
+  background-color: #070707;
+  
+}
+
+/* Centralização do conteúdo */
+.btModoNoturno {
+  position: absolute;
+  bottom: 5%;
+  right: 40%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="checkbox"] {
+  position: fixed;
+  width: 40px;
+  height: 20px;
+  -webkit-appearance: none; /* Aparência padrão do checkbox é anulada */
+  background-color: #f5d2e8; /* cor de fundo */
+  outline: none; /* sem borda externa */
+  border-radius: 20px; /* arrendodamento dos cantos */
+  box-shadow: inset 0 0 5px rgba(238, 172, 210, 0.993); /* sombra interna */
+  transition: .2s; /* tempo de transição que vai ocorrer com a cor de fundo e com a posção da bolinha*/
+  cursor: pointer;/* estabelecer que o mouse vai ter uma aparência como se fosse clicar em um botão */
+}
+
+input:checked[type="checkbox"] {
+  background-color: #ec91c9;/* cor de fundo que vai ser aplicada quando o checkbox tiver uma alteração para checked */
+}
+/* O seletor :before pode criar objetos antes do elemento principal, no caso cria a bolinha do botão  */
+input[type="checkbox"]:before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  transform: scale(1.2);
+  box-shadow: 0 2px 5px rgba(240, 166, 224, 0.89);
+  transition: .2s;
+}
+
+input:checked[type="checkbox"]:before {
+  left: 22px;
+}
+  
+}
